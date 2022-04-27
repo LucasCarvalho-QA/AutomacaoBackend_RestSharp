@@ -34,6 +34,7 @@ namespace AutomacaoBackend_RestSharp
             //Act - De fato vamos fazer nosso teste
             RestClient client = new RestClient("https://gorest.co.in/public/v2/users");
             client.Authenticator = new JwtAuthenticator(token);
+
             RestRequest request = new RestRequest(Method.POST);
             request.AddJsonBody(bodyRequest);
 
